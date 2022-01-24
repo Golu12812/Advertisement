@@ -1,0 +1,10 @@
+{% extends 'base/main.html'%}
+{% block content %}
+<h1>CREATE New Advertisement </h1>
+<form method="POST" action="">
+    <a href="{% url 'tasks'%}">BACK to Advertisements</a>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="submit">
+</form>
+{% endblock content %}
